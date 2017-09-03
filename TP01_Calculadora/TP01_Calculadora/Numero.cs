@@ -29,7 +29,7 @@ namespace TP01_Calculadora
             this.numero = numero;
         }
         /// <summary>
-        /// recibirá un String que validará y cargará en número
+        /// Recibirá un String que validará y cargará en número
         /// </summary>
         /// <param name="numero"></param>
         public Numero(string numero)
@@ -38,12 +38,14 @@ namespace TP01_Calculadora
 
         }
         #endregion
+
+
         #region Metodos
         /// <summary>
         /// Valida un string y lo devuelve
         /// </summary>
         /// <param name="numero"></param>
-        /// <returns></returns>
+        /// <returns>Devuelve el string convertido a double.</returns>
         private double SetNumero(string numero)
         {
             return ValidarNumero(numero);
@@ -52,7 +54,7 @@ namespace TP01_Calculadora
         /// Valida si un string es numero y lo devuelve. Caso contrario devuelve 0.
         /// </summary>
         /// <param name="numeroString"></param>
-        /// <returns></returns>
+        /// <returns>Devuelve el nro convertido a double si es valido, sino 0</returns>
         private double ValidarNumero(string numeroString)
         {
             double ret = 0;
@@ -62,7 +64,10 @@ namespace TP01_Calculadora
             return ret;
 
         }
-
+        /// <summary>
+        /// Metodo publico que devuelve el nro de la instancia.
+        /// </summary>
+        /// <returns>El numero de la instancia.</returns>
         public double GetNumero()
         {
             return this.numero;

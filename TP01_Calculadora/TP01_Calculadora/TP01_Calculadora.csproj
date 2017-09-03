@@ -52,7 +52,7 @@
       <DependentUpon>frmCalculadora.cs</DependentUpon>
     </Compile>
     <Compile Include="Numero.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="TP01_Calculadora.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCalculadora.resx">
       <DependentUpon>frmCalculadora.cs</DependentUpon>

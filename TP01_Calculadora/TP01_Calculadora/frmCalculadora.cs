@@ -17,8 +17,12 @@ namespace TP01_Calculadora
             InitializeComponent();
         }
 
-
-        private void Operar_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Realiza la operacion elegda en el combo box entre los valores ingresados en los text box 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Operar(object sender, EventArgs e)
         {
             Numero nro1 = new Numero(txtNumero1.Text);
             Numero nro2 = new Numero(txtNumero2.Text);
@@ -32,7 +36,12 @@ namespace TP01_Calculadora
             }
 
         }
-        private void limpiar(object sender, EventArgs e)
+        /// <summary>
+        /// Limpia todos los campos texto. Pone el combo box en su valor inicial. Deja el cursor listo para la proxima operacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Limpiar(object sender, EventArgs e)
         {
             lblResultado.Text = "";
             txtNumero1.Text = "";
@@ -40,13 +49,17 @@ namespace TP01_Calculadora
             cmbOperacion.SelectedItem = "+";
             txtNumero1.Select();
         }
-
+        /// <summary>
+        /// Verifica si se presiono Enter en el segundo text box. Si es asi, realiza la operacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HitEnter(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '\r')
             {
                 btnOperar.Select();
-                Operar_Click(sender, e);
+                Operar(sender, e);
             }
                 
 

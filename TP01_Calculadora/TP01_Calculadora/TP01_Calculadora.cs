@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace TP01_Calculadora
 {
-    static class Program
+    static class TP01_Calculadora
     {
         /// <summary>
         /// The main entry point for the application.

@@ -82,6 +82,7 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnLimpiar.Location = new System.Drawing.Point(20, 106);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -89,10 +90,11 @@
             this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "&CC";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.limpiar);
+            this.btnLimpiar.Click += new System.EventHandler(this.Limpiar);
             // 
             // btnOperar
             // 
+            this.btnOperar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOperar.Location = new System.Drawing.Point(174, 106);
             this.btnOperar.Name = "btnOperar";
@@ -100,7 +102,7 @@
             this.btnOperar.TabIndex = 4;
             this.btnOperar.Text = "=";
             this.btnOperar.UseVisualStyleBackColor = true;
-            this.btnOperar.Click += new System.EventHandler(this.Operar_Click);
+            this.btnOperar.Click += new System.EventHandler(this.Operar);
             // 
             // frmCalculadora
             // 
