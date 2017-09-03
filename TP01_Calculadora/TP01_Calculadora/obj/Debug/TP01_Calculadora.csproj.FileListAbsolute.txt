@@ -1,0 +1,8 @@
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\bin\Debug\TP01_Calculadora.exe.config
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\bin\Debug\TP01_Calculadora.exe
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\bin\Debug\TP01_Calculadora.pdb
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\obj\Debug\TP01_Calculadora.frmCalculadora.resources
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\obj\Debug\TP01_Calculadora.Properties.Resources.resources
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\obj\Debug\TP01_Calculadora.csproj.GenerateResource.Cache
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\obj\Debug\TP01_Calculadora.exe
+C:\Ale\GitHub\02-Programacion-Y-Laboratorio-II\02-Programacion-Y-Laboratorio-II\TP01_Calculadora\TP01_Calculadora\obj\Debug\TP01_Calculadora.pdb
