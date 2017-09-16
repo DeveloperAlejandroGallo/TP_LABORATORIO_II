@@ -24,9 +24,7 @@ namespace TP01_Calculadora
             nro1 = numero1.GetNumero();
             nro2 = numero2.GetNumero();
 
-            operador = ValidarOperador(operador);
-
-            switch (operador)
+            switch (ValidarOperador(operador))
             {
                 case "+":
                     result = nro1 + nro2;
