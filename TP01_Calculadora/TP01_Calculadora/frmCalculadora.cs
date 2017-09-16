@@ -29,11 +29,9 @@ namespace TP01_Calculadora
 
             Calculadora calc = new Calculadora();
 
-            lblResultado.Text = calc.Operar(nro1, nro2, cmbOperacion.Text).ToString();
-            if(cmbOperacion.Text != calc.ValidarOperador(cmbOperacion.Text))
-            {
-                cmbOperacion.SelectedItem = "+";
-            }
+            lblResultado.Text = Calculadora.Operar(nro1, nro2, cmbOperacion.Text).ToString();
+            cmbOperacion.SelectedItem = Calculadora.ValidarOperador(cmbOperacion.Text);
+
 
         }
         /// <summary>

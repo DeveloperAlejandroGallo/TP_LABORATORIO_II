@@ -55,7 +55,7 @@ namespace TP01_Calculadora
         /// </summary>
         /// <param name="numeroString"></param>
         /// <returns>Devuelve el nro convertido a double si es valido, sino 0</returns>
-        private double ValidarNumero(string numeroString)
+        private static double ValidarNumero(string numeroString)
         {
             double ret = 0;
 

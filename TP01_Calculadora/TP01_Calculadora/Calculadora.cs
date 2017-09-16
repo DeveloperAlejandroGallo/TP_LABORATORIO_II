@@ -16,7 +16,7 @@ namespace TP01_Calculadora
         /// <param name="numero2">Variable Tipo Numero</param>
         /// <param name="operador">Variable string +,-,*,/</param>
         /// <returns>Resultado de la operacion entre ambos numeros</returns>
-        public double Operar(Numero numero1, Numero numero2,string operador)
+        public static double Operar(Numero numero1, Numero numero2,string operador)
         {
             double result = 0, nro1, nro2;
             
@@ -56,7 +56,7 @@ namespace TP01_Calculadora
         /// </summary>
         /// <param name="operador"></param>
         /// <returns></returns>
-        public string ValidarOperador(string operador)
+        public static string ValidarOperador(string operador)
         {
             if (operador == "+" || operador == "-" || operador == "*" || operador == "/")
                 return operador;
