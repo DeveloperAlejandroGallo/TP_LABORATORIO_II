@@ -1,0 +1,8 @@
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\bin\Debug\TP-02.exe.config
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\bin\Debug\TP-02.exe
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\bin\Debug\TP-02.pdb
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\bin\Debug\Entidades.dll
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\bin\Debug\Entidades.pdb
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\obj\Debug\TP-02.exe
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\TP-02\obj\Debug\TP-02.pdb

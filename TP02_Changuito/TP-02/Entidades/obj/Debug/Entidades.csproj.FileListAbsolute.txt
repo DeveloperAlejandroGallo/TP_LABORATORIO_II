@@ -1,0 +1,4 @@
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\Entidades\bin\Debug\Entidades.dll
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\Entidades\obj\Debug\Entidades.dll
+C:\Ale\FRA\02-ProgYLab\TP_LABORATORIO_II-master\TP02_Changuito\TP-02\Entidades\obj\Debug\Entidades.pdb
