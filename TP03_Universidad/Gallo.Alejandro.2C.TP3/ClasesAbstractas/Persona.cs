@@ -84,13 +84,7 @@ namespace ClasesAbstractas
         }
 
         public Persona()
-        {
-            dni = 0;
-            nombre = "";
-            apellido = "";
-            nacionalidad = ENacionalidad.Argentino;
-
-        }
+        { }
 
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {

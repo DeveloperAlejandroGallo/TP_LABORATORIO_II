@@ -18,17 +18,6 @@ namespace ClasesAbstractas
 
         private int legajo;
 
-        public int Legajo
-        {
-            get
-            {
-                return legajo;
-            }
-            set
-            {
-                legajo = value;
-            }
-        }
 
         public Universitario()
         { }
@@ -36,7 +25,7 @@ namespace ClasesAbstractas
         public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             :base(nombre,apellido, dni, nacionalidad)
         {
-            Legajo = legajo;
+            this.legajo = legajo;
         }
 
 
@@ -45,7 +34,7 @@ namespace ClasesAbstractas
             StringBuilder str = new StringBuilder();
 
             str.AppendLine(base.ToString());
-            str.AppendFormat("LEGAJO: {0}", Legajo);
+            str.AppendFormat("LEGAJO: {0}", this.legajo);
 
             return str.ToString();
         }
@@ -54,20 +43,23 @@ namespace ClasesAbstractas
 
         public override bool Equals(object obj)
         {
-            return obj is Universitario;
+            return (this.GetType() == obj.GetType() &&
+                (this.DNI == ((Universitario)obj).DNI || this.legajo == ((Universitario)obj).legajo));
         }
 
-        public static bool operator ==(Universitario unUnuversitario, Universitario otroUniversitario)
+        public static bool operator ==(Universitario unUniversitario, Universitario otroUniversitario)
         {
-            return (unUnuversitario.GetType() == otroUniversitario.GetType() &&
-                unUnuversitario.DNI == otroUniversitario.DNI &&
-                unUnuversitario.Nombre == otroUniversitario.Nombre);
+            return (unUniversitario.GetType() == otroUniversitario.GetType() &&
+                (unUniversitario.DNI == otroUniversitario.DNI || unUniversitario.legajo == otroUniversitario.legajo) );
         }
 
         public static bool operator !=(Universitario unUnuversitario, Universitario otroUniversitario)
         {
             return !(unUnuversitario == otroUniversitario);
         }
+
+
+
 
     }
 }

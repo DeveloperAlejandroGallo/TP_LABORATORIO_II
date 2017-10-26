@@ -7,7 +7,7 @@ using ClasesAbstractas;
 
 namespace ClasesInstanciables
 {
-    sealed class Alumno : Universitario
+    public sealed class Alumno : Universitario
     {
        public enum EEstadoCuenta
         {
