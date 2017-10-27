@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClasesAbstractas;
+using EntidadesAbstractas;
 
 namespace ClasesInstanciables
 {
@@ -16,19 +16,19 @@ namespace ClasesInstanciables
             Becado
         }
 
-        EClases claseQueToma;
+        Universidad.EClases claseQueToma;
         EEstadoCuenta estadoCuenta;
 
         public Alumno()
         { }
 
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, EClases claseQueToma)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma)
             :base(id, nombre, apellido, dni,nacionalidad)
         {
             this.claseQueToma = claseQueToma;
         }
 
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, EClases claseQueToma, EEstadoCuenta estadoCuenta)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta)
             :this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {
             this.estadoCuenta = estadoCuenta;
@@ -55,12 +55,12 @@ namespace ClasesInstanciables
             return this.MostrarDatos();
         }
 
-        public static bool operator ==(Alumno alumno, EClases clase)
+        public static bool operator ==(Alumno alumno, Universidad.EClases clase)
         {
             return alumno.claseQueToma == clase && alumno.estadoCuenta != EEstadoCuenta.Deudor;
         }
 
-        public static bool operator !=(Alumno alumno, EClases clase)
+        public static bool operator !=(Alumno alumno, Universidad.EClases clase)
         {
             return alumno.claseQueToma != clase;
         }

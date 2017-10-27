@@ -4,18 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasesAbstractas
+namespace EntidadesAbstractas
 {
     public abstract class Universitario : Persona
     {
-        public enum EClases
-        {
-            Programacion,
-            Laboratorio,
-            Legislacion,
-            SPD
-        }
-
+        
         private int legajo;
 
 

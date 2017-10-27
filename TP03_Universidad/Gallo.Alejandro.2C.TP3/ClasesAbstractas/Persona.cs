@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Excepciones;
 
-namespace ClasesAbstractas
+namespace EntidadesAbstractas
 {
     public abstract class Persona
     {
@@ -41,7 +42,7 @@ namespace ClasesAbstractas
             set
             {
                 if (ValidarDNI(Nacionalidad,value)==0)
-                    throw new Exception();
+                    throw new DniInvalidoException();
 
                 dni = value;
             }
@@ -108,9 +109,9 @@ namespace ClasesAbstractas
         private int ValidarDNI(ENacionalidad nacionalidad, int dato)
         {
             if (nacionalidad == ENacionalidad.Argentino && (dato < 1 || dato > 89999999))
-                return dato;
-            else
                 return 0;
+            else
+                return dato;
 
         }
 

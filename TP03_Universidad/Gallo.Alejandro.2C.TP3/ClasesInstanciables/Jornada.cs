@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClasesAbstractas;
+using EntidadesAbstractas;
+using Archivos;
+
 
 namespace ClasesInstanciables
 {
@@ -24,9 +26,9 @@ namespace ClasesInstanciables
             }
         }
 
-        private Universitario.EClases clase;
+        private Universidad.EClases clase;
 
-        public Universitario.EClases Clase
+        public Universidad.EClases Clase
         {
             get
             {
@@ -40,7 +42,7 @@ namespace ClasesInstanciables
 
         private Profesor instructor;
 
-        public Profesor Profesor
+        public Profesor Instructor
         {
             get
             {
@@ -62,10 +64,10 @@ namespace ClasesInstanciables
         }
 
 
-        public Jornada(Universitario.EClases clase, Profesor instructor)
+        public Jornada(Universidad.EClases clase, Profesor instructor)
         {
             this.Clase = clase;
-            this.Profesor = instructor;
+            this.Instructor = instructor;
         }
 
         #endregion
@@ -79,7 +81,7 @@ namespace ClasesInstanciables
             str.AppendLine("JORNADA");
             str.AppendFormat("CLASE {0}\n", this.Clase);
             str.AppendLine("PROFESOR:\n");
-            str.AppendLine(Profesor.ToString());
+            str.AppendLine(Instructor.ToString());
             str.AppendLine("ALUMNOS:");
             
             foreach(Alumno a in this.Alumnos)
@@ -113,7 +115,24 @@ namespace ClasesInstanciables
             return j;
         }
 
-        
+        public static bool Guardar(Jornada jornada)
+        {
+            Texto archivoTxt = new Texto();
+            archivoTxt.Guardar("Jornada.txt", jornada.ToString());
+            return true;
+        }
+
+        public static string Leer()
+        {
+            string str;
+            Texto texto = new Texto();
+            texto.Leer("Jornada.txt", out str);
+            return str;
+
+
+        }
+
+
         #endregion
 
 

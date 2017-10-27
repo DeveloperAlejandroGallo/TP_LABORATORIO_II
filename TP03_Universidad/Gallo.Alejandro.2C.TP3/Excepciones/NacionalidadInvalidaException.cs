@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
-    class NacionalidadInvalidaException
+    public class NacionalidadInvalidaException : Exception
     {
+
+        public NacionalidadInvalidaException()
+            :base("ERROR=> NACIONALIDAD INVALIDA")
+        {
+        }
+
+        public NacionalidadInvalidaException(string mensaje) 
+            : base(mensaje) 
+        {
+        }
+
     }
 }
