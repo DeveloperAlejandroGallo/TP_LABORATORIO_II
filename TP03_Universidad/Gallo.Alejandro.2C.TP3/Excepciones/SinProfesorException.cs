@@ -9,7 +9,7 @@ namespace Excepciones
     public class SinProfesorException : Exception
     {
         public SinProfesorException()
-            :base("ERROR=> SIN PROFESOR")
+            :base("No hay profesor para la clase.\n")
         {
         }
         

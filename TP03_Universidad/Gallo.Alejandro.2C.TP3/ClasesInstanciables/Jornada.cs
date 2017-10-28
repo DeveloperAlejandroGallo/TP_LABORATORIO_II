@@ -65,6 +65,7 @@ namespace ClasesInstanciables
 
 
         public Jornada(Universidad.EClases clase, Profesor instructor)
+            :this()
         {
             this.Clase = clase;
             this.Instructor = instructor;

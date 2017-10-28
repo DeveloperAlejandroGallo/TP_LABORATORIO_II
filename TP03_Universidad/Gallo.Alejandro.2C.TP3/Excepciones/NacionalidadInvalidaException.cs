@@ -10,7 +10,7 @@ namespace Excepciones
     {
 
         public NacionalidadInvalidaException()
-            :base("ERROR=> NACIONALIDAD INVALIDA")
+            :base("La nacionalidad no coincide con el DNI.\n")
         {
         }
 

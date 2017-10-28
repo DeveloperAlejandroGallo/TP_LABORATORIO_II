@@ -8,15 +8,9 @@ namespace Excepciones
 {
     public class ArchivosException : Exception
     {
-        static string msj = "ERROR EN ARCHIVO";
-
-        public ArchivosException()
-            :base(msj)
-        {
-        }
-    
+     
         public ArchivosException(Exception innerException)
-            : base(msj,innerException) 
+            : base("Error al intentar leer o escribir el archivo", innerException) 
         { 
         }
 

@@ -41,10 +41,7 @@ namespace EntidadesAbstractas
             }
             set
             {
-                if (ValidarDNI(Nacionalidad,value)==0)
-                    throw new DniInvalidoException();
-
-                dni = value;
+                dni = ValidarDNI(Nacionalidad, value);
             }
         }
 
@@ -108,10 +105,18 @@ namespace EntidadesAbstractas
 
         private int ValidarDNI(ENacionalidad nacionalidad, int dato)
         {
-            if (nacionalidad == ENacionalidad.Argentino && (dato < 1 || dato > 89999999))
-                return 0;
+            if (nacionalidad == ENacionalidad.Argentino)
+            { 
+                if(dato < 1 || dato > 89999999)
+                { 
+                    throw new DniInvalidoException("DNI Argentino Invalido");
+                }
+            }
             else
-                return dato;
+                if(dato >= 1 && dato <= 89999999)
+                    throw new NacionalidadInvalidaException();
+
+            return dato;
 
         }
 
@@ -138,8 +143,8 @@ namespace EntidadesAbstractas
         {
             StringBuilder str = new StringBuilder();
             str.AppendFormat("NOMBRE COMPLETO: {0}, {1}\n", Apellido, Nombre);
-            str.AppendFormat("DNI: {0}", DNI);
-            str.AppendFormat("NACIONALIDAD: {0}", Nacionalidad);
+            str.AppendFormat("DNI: {0}\n", DNI);
+            str.AppendFormat("NACIONALIDAD: {0}\n", Nacionalidad);
             return str.ToString();
         }
     }

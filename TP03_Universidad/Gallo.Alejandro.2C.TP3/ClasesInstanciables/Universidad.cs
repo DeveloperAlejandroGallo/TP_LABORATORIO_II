@@ -104,7 +104,7 @@ namespace ClasesInstanciables
 
         public static bool operator ==(Universidad u, Profesor profe)
         {
-            foreach (Profesor p in u.profesores)
+            foreach (Profesor p in u.Instructores)
             {
                 if (p == profe)
                     return true;
@@ -138,13 +138,12 @@ namespace ClasesInstanciables
 
             jornada = new Jornada(clase, profe);
 
-            foreach (Alumno a in u.alumnos)
+            foreach (Alumno a in u.Alumnos)
             {
                 if (a == clase)
                     jornada.Alumnos.Add(a);
             }
-
-
+            
             u.Jornadas.Add(jornada);
 
             return u;
@@ -156,7 +155,7 @@ namespace ClasesInstanciables
             foreach (Alumno a in uni.Alumnos)
             {
                 if (a == alu)
-                    return uni;
+                    throw new AlumnoRepetidoException();
             }
             uni.Alumnos.Add(alu);
 

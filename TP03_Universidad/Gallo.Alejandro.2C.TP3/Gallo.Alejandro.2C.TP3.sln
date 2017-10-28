@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP03_Universidad", "TP03\TP03_Universidad.csproj", "{85E93BAA-D36E-4673-B4A8-3F2A4A6E4864}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archivos", "Archivos\Archivos.csproj", "{FA0F980B-BABD-40CF-8462-32E3FEE0A7D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{3FA90BAF-5967-470C-8AE5-F200A522F1C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnuversidadTest", "UnuversidadTest\UnuversidadTest.csproj", "{CCF491E3-F6A2-4D0D-A818-96877A1F7569}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3FA90BAF-5967-470C-8AE5-F200A522F1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FA90BAF-5967-470C-8AE5-F200A522F1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FA90BAF-5967-470C-8AE5-F200A522F1C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF491E3-F6A2-4D0D-A818-96877A1F7569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF491E3-F6A2-4D0D-A818-96877A1F7569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF491E3-F6A2-4D0D-A818-96877A1F7569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF491E3-F6A2-4D0D-A818-96877A1F7569}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

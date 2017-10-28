@@ -18,14 +18,13 @@ namespace ClasesInstanciables
         }
 
         public Profesor()
-        {
-            clasesDelDia = new Queue<Universidad.EClases>();
-            RandomClases();
-        }
+        { }
 
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             :base(id,nombre,apellido,dni,nacionalidad)
         {
+            clasesDelDia = new Queue<Universidad.EClases>();
+            RandomClases();
         }
 
         private void RandomClases()
@@ -62,9 +61,9 @@ namespace ClasesInstanciables
             return MostrarDatos();
         }
 
-        public static bool operator ==(Profesor profesor, Universidad.EClases clase)
+        public static bool operator ==(Profesor profe, Universidad.EClases clase)
         {
-            foreach(Universidad.EClases cla in profesor.clasesDelDia)
+            foreach(Universidad.EClases cla in profe.clasesDelDia)
             {
                 if (cla == clase)
                     return true;

@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class DniInvalidoException : Exception
     {
-        static string mensajeBase = "ERROR=> DNI INVALIDO";
+        static string mensajeBase = "DNI Invalido";
 
         public DniInvalidoException()
             :base(mensajeBase)
@@ -16,18 +16,18 @@ namespace Excepciones
         }
 
         public DniInvalidoException(string mensaje) 
-            : base(mensaje) 
+            : base(mensaje, null) 
         {
         }
 
         public DniInvalidoException(Exception e)
-            : base(mensajeBase, e)
+            : this(mensajeBase, e)
         {
         }
 
 
-        public DniInvalidoException(string mensaje, Exception innerException)
-            : base(mensajeBase + ": " + mensaje , innerException) 
+        public DniInvalidoException(string mensaje, Exception e)
+            : base(mensaje , e) 
         {
         }
     }
