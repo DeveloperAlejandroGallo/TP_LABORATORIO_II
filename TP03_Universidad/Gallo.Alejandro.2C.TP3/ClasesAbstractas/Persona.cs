@@ -16,8 +16,12 @@ namespace EntidadesAbstractas
             Extranjero
         }
 
-
         private string apellido;
+        private int dni;
+        private ENacionalidad nacionalidad;
+        private string nombre;
+
+        #region Propiedades
 
         public string Apellido
         {
@@ -31,7 +35,6 @@ namespace EntidadesAbstractas
             }
         }
 
-        private int dni;
 
         public int DNI
         {
@@ -45,7 +48,7 @@ namespace EntidadesAbstractas
             }
         }
 
-        private ENacionalidad nacionalidad;
+
 
         public ENacionalidad Nacionalidad
         {
@@ -59,7 +62,7 @@ namespace EntidadesAbstractas
             }
         }
 
-        private string nombre;
+
 
         public string Nombre
         {
@@ -77,9 +80,11 @@ namespace EntidadesAbstractas
         {
             set
             {
-                  DNI = ValidarDNI(Nacionalidad,value);
+                DNI = ValidarDNI(Nacionalidad, value);
             }
         }
+
+        #endregion
 
         public Persona()
         { }

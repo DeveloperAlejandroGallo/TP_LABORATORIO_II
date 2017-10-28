@@ -46,9 +46,9 @@ namespace EntidadesAbstractas
                 (unUniversitario.DNI == otroUniversitario.DNI || unUniversitario.legajo == otroUniversitario.legajo) );
         }
 
-        public static bool operator !=(Universitario unUnuversitario, Universitario otroUniversitario)
+        public static bool operator !=(Universitario unUniversitario, Universitario otroUniversitario)
         {
-            return !(unUnuversitario == otroUniversitario);
+            return !(unUniversitario == otroUniversitario);
         }
 
 
