@@ -14,9 +14,15 @@ namespace Hilo
         private string html;
         private Uri direccion;
 
+        public delegate void dProgreso(int porcentaje);
+        public delegate void dFinDescarga(string html);
+
+        public event dProgreso progreso;
+        public event dFinDescarga finDescarga;
+
         public Descargador(Uri direccion)
         {
-            this.html = "";
+            this.direccion = direccion;
         }
 
         public void IniciarDescarga()
@@ -37,9 +43,19 @@ namespace Hilo
 
         private void WebClientDownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
+            this.progreso.Invoke(e.ProgressPercentage);
         }
         private void WebClientDownloadCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
+            try
+            { 
+                this.html = e.Result;
+                this.finDescarga.Invoke(e.Result);
+            }
+            catch(Exception ex)
+            {
+                this.finDescarga.Invoke("Error al Descargar - "+ ex);
+            }
         }
     }
 }

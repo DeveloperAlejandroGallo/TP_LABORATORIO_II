@@ -28,7 +28,7 @@ namespace Archivos
             else
                 stream = new StreamWriter(this.archivo);
 
-                stream.Write(datos);
+                stream.WriteLine(datos);
             }
             catch (Exception e)
             {
@@ -46,13 +46,23 @@ namespace Archivos
         public bool leer(out List<string> datos)
         {
             string line;
-            StreamReader sr = new StreamReader(archivo);
-
+            StreamReader sr=null;
             datos = new List<string>();
-                        
-            while ((line = sr.ReadLine()) != null)
-                datos.Add(line);
 
+            try
+            { 
+                sr = new StreamReader(archivo);
+                while ((line = sr.ReadLine()) != null)
+                    datos.Add(line);
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+            finally
+            { 
+                sr.Close();
+            }
             return true;
         }
 

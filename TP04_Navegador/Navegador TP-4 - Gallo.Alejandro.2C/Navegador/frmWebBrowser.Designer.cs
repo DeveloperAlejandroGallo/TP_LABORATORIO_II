@@ -49,6 +49,7 @@
             this.btnIr.TabIndex = 0;
             this.btnIr.Text = "-->";
             this.btnIr.UseVisualStyleBackColor = true;
+            this.btnIr.Click += new System.EventHandler(this.btnIr_Click);
             // 
             // statusStrip
             // 
@@ -63,7 +64,7 @@
             // tspbProgreso
             // 
             this.tspbProgreso.Name = "tspbProgreso";
-            this.tspbProgreso.Size = new System.Drawing.Size(100, 16);
+            this.tspbProgreso.Size = new System.Drawing.Size(300, 16);
             // 
             // txtUrl
             // 
@@ -75,6 +76,7 @@
             this.txtUrl.TabIndex = 2;
             this.txtUrl.Tag = "Introduzca la dirección web";
             this.txtUrl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUrl_KeyDown);
+            this.txtUrl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrl_KeyPress);
             this.txtUrl.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUrl_KeyUp);
             this.txtUrl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtUrl_MouseDown);
             this.txtUrl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.txtUrl_MouseMove);
@@ -84,9 +86,9 @@
             this.rtxtHtmlCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtxtHtmlCode.Enabled = false;
             this.rtxtHtmlCode.Location = new System.Drawing.Point(0, 52);
             this.rtxtHtmlCode.Name = "rtxtHtmlCode";
+            this.rtxtHtmlCode.ReadOnly = true;
             this.rtxtHtmlCode.Size = new System.Drawing.Size(918, 337);
             this.rtxtHtmlCode.TabIndex = 3;
             this.rtxtHtmlCode.Text = "";
@@ -114,6 +116,7 @@
             this.mostrarTodoElHistorialToolStripMenuItem.Name = "mostrarTodoElHistorialToolStripMenuItem";
             this.mostrarTodoElHistorialToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.mostrarTodoElHistorialToolStripMenuItem.Text = "Mostrar todo el Historial";
+            this.mostrarTodoElHistorialToolStripMenuItem.Click += new System.EventHandler(this.mostrarTodoElHistorialToolStripMenuItem_Click);
             // 
             // frmWebBrowser
             // 
@@ -143,13 +146,13 @@
         #endregion
 
         private System.Windows.Forms.Button btnIr;
-        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripProgressBar tspbProgreso;
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.RichTextBox rtxtHtmlCode;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarTodoElHistorialToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip;
     }
 }
 

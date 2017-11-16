@@ -21,8 +21,16 @@ namespace Navegador
 
         private void frmHistorial_Load(object sender, EventArgs e)
         {
+            List<string> listHistory;
             Archivos.Texto archivos = new Archivos.Texto(frmHistorial.ARCHIVO_HISTORIAL);
 
+            if (archivos.leer(out listHistory))
+            {
+                foreach (string url in listHistory)
+                    lstHistorial.Items.Add(url);
+            }
+            else
+                MessageBox.Show("No se pudo cargar el historial", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
         }
     }

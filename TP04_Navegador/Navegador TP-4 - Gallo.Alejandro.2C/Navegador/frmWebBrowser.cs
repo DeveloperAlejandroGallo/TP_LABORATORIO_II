@@ -17,6 +17,8 @@ namespace Navegador
     {
         private const string ESCRIBA_AQUI = "Escriba aquí...";
         Archivos.Texto archivos;
+        Descargador descargador;
+        Thread hiloDescarga;
 
         public frmWebBrowser()
         {
@@ -29,6 +31,7 @@ namespace Navegador
             this.txtUrl.SelectionLength = 0; //from being highlighted
             this.txtUrl.ForeColor = Color.Gray;
             this.txtUrl.Text = frmWebBrowser.ESCRIBA_AQUI;
+            this.txtUrl.Focus();
 
             archivos = new Archivos.Texto(frmHistorial.ARCHIVO_HISTORIAL);
         }
@@ -76,6 +79,7 @@ namespace Navegador
                 tspbProgreso.Value = progreso;
             }
         }
+
         delegate void FinDescargaCallback(string html);
         private void FinDescarga(string html)
         {
@@ -88,6 +92,48 @@ namespace Navegador
             {
                 rtxtHtmlCode.Text = html;
             }
+        }
+
+        private void btnIr_Click(object sender, EventArgs e)
+        {
+            if (!txtUrl.Text.Contains("http://") && !txtUrl.Text.Contains("https://"))
+                txtUrl.Text = "http://" + txtUrl.Text;
+            
+
+            try
+            { 
+                archivos.guardar(txtUrl.Text);
+            }
+            catch(Exception )
+            {
+                MessageBox.Show("Error al guardar historial");
+            }
+
+            try
+            {
+                descargador = new Descargador(new Uri(txtUrl.Text));
+
+                this.descargador.progreso += ProgresoDescarga;
+                this.descargador.finDescarga += FinDescarga;
+                hiloDescarga = new Thread(descargador.IniciarDescarga);
+                hiloDescarga.Start();
+            }
+            catch(Exception )
+            {
+                MessageBox.Show("Error al realizar la descarga.");
+            }
+        }
+
+        private void mostrarTodoElHistorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHistorial hist = new frmHistorial();
+            hist.ShowDialog();
+        }
+
+        private void txtUrl_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+                btnIr_Click(sender, new EventArgs());
         }
     }
 }
